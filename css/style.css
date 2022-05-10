@@ -1,0 +1,102 @@
+div
+{
+    padding: 10px;
+}
+h1
+{
+    font-size: 2rem;
+    padding: 10px 0;
+}
+
+@media only screen and (max-width: 410px)
+{
+
+
+    body{
+        background-color: red;
+    }
+
+    /*.medium, .large*/
+    /*{*/
+    /*    display: none;*/
+    /*}*/
+
+
+    p
+    {
+        font-size: 1.5rem;
+        color: white;
+    }
+}
+
+@media (min-width: 411px) and (max-width: 768px)
+{
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-areas:
+    "medium . ."
+    "small small ."
+    "Large Large Large";
+    }
+
+    body{
+        background-color: green;
+    }
+
+    /*.small, .large*/
+    /*{*/
+    /*    display: none;*/
+    /*}*/
+    p
+    {
+        font-size: 1.3rem;
+        color: white;
+    }
+    .medium
+    {
+        grid-area: medium;
+    }
+    .small {
+        grid-area: small;
+    }
+
+    .large
+    {
+        grid-area: Large;
+    }
+
+}
+
+@media only screen and (min-width: 769px)
+{
+    body{
+        background-color: blue;
+    }
+    .container {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+    "small medium large";
+    }
+    .small { grid-area: small; }
+    .medium { grid-area: medium; }
+    .large {
+        grid-area: large;
+    }
+
+    /*.medium, .small*/
+    /*{*/
+    /*    display: none;*/
+    /*}*/
+
+    p
+    {
+        color: white;
+    }
+}
+
+
